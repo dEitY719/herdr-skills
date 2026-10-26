@@ -11,6 +11,11 @@ set -euo pipefail
 
 VENDOR="$(cd -- "$(dirname -- "$0")/.." && pwd)/SKILL.md"
 
+for _ref in layout-and-agents ids-and-caller-context agent-coordination pane-commands; do
+    [ -f "$(dirname -- "$VENDOR")/references/$_ref.md" ] ||
+        { echo "[FAIL] missing references/$_ref.md (split sections of SKILL.md)" >&2; exit 1; }
+done
+
 if ! command -v herdr >/dev/null 2>&1; then
     echo "[SKIP] herdr not in PATH"
     exit 0
