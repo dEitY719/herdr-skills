@@ -37,7 +37,20 @@ repo is MIT.
    (`.github/workflows/validate.yml` `license-exceptions`) requires a
    `license:` key in every SKILL.md; upstream's frontmatter has none.
 
-Nothing else differs. The `description` and the whole body are byte-identical
+3. Progressive-disclosure split (owner decision, authoring:skill-refactor):
+   the sections "Understand layout, panes, and agents", "Use IDs and caller
+   context", "Start and coordinate an agent" and "Run an ordinary command in
+   another pane" moved verbatim to `references/*.md`, replaced in SKILL.md by a
+   pointer list. Text is unchanged, but SKILL.md no longer matches upstream, so
+   `scripts/upstream-drift.selfcheck.sh` reports drift until it is taught to
+   compare the reassembled body.
+
+4. Frontmatter `metadata.model_recommendation` added (tier sonnet), to satisfy
+   authoring:skill-check Check 13.
+5. Frontmatter comment `# Check 16: ...` added above `description:`, to satisfy
+   Check 16 (description is 328 chars). The description text is unchanged.
+
+Nothing else differs. The `description` and all moved text are byte-identical
 to upstream.
 
 ## Update procedure
@@ -46,7 +59,8 @@ to upstream.
    `herdr --skill > /tmp/herdr-skill.md`
 2. Replace `skills/control/SKILL.md` with that file, then re-apply the local
    changes listed above (`name: control`).
-3. Run the drift self-check. It must print `[OK] in sync with herdr <version>`:
+3. Re-split per local change 3 (moved sections go to `references/*.md`, in
+   upstream order, each prefixed by a two-line title). Run the drift self-check. It must print `[OK] in sync with herdr <version>`:
    `bash skills/control/scripts/upstream-drift.selfcheck.sh`
 4. Update the table above (tag, commits, baseline version), and refresh
    `LICENSE.txt` if upstream changed it.

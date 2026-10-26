@@ -1,6 +1,6 @@
 {
   "name": "herdr",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Skills for driving Herdr (terminal multiplexer for coding agents): control panes, tabs, workspaces and agents via the herdr CLI",
   "author": {
     "name": "dEitY719",
