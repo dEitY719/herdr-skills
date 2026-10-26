@@ -1,0 +1,26 @@
+name: validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    uses: dEitY719/harness-skills/.github/workflows/skill-check.yml@main
+    with:
+      plugin-name: herdr
+      # skills/control/SKILL.md is the upstream Herdr agent skill vendored
+      # verbatim (214 lines); its body may not be split into references/
+      # without breaking the byte-identical drift self-check. See
+      # skills/control/references/upstream.md.
+      max-skill-lines: 220
+      # skills/control/ is Apache-2.0 (herdrdev/herdr); section 4(a) forbids
+      # relicensing it, so its SKILL.md is declared here while the rest of the
+      # repo is MIT. Precedent: authoring-skills skills/skill-create/.
+      license-exceptions: |
+        skills/control/SKILL.md: Apache-2.0

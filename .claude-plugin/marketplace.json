@@ -1,0 +1,16 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "herdr-skills",
+  "description": "Herdr terminal-multiplexer control skills for coding agents",
+  "owner": { "name": "dEitY719", "url": "https://github.com/dEitY719" },
+  "plugins": [
+    {
+      "name": "herdr",
+      "description": "Skills for driving Herdr (terminal multiplexer for coding agents): control panes, tabs, workspaces and agents via the herdr CLI",
+      "version": "0.1.0",
+      "source": "./",
+      "homepage": "https://github.com/dEitY719/herdr-skills",
+      "author": { "name": "dEitY719", "url": "https://github.com/dEitY719" }
+    }
+  ]
+}

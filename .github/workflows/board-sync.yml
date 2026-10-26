@@ -1,0 +1,13 @@
+name: board-sync
+
+on:
+  issues:
+    types: [opened, reopened, transferred]
+
+permissions:
+  contents: read
+
+jobs:
+  board-sync:
+    uses: dEitY719/harness-skills/.github/workflows/add-to-project.yml@main
+    secrets: inherit

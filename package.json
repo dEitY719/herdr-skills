@@ -1,0 +1,13 @@
+{
+  "name": "herdr-skills",
+  "version": "0.1.0",
+  "description": "Skills for driving Herdr (terminal multiplexer for coding agents): control panes, tabs, workspaces and agents via the herdr CLI",
+  "type": "module",
+  "main": ".opencode/plugins/herdr.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dEitY719/herdr-skills.git"
+  },
+  "keywords": ["skills", "plugin", "marketplace", "herdr"]
+}

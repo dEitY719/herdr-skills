@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>herdr:control guide</title>
+<style>
+:root { --bg: #ffffff; --text: #1a1a1a; --code: #f2f2f2; }
+@media (prefers-color-scheme: dark) { :root { --bg: #0a0a0a; --text: #ededed; --code: #1c1c1c; } }
+body { background: var(--bg); color: var(--text); font: 16px/1.6 system-ui, sans-serif; max-width: 46rem; margin: 2rem auto; padding: 0 16px; }
+code { background: var(--code); padding: 0 .25em; border-radius: 3px; }
+</style>
+</head>
+<body>
+<h1>herdr:control</h1>
+<p>Placeholder guide. Vendored copy of the official Herdr agent skill (<code>herdrdev/herdr</code>, <code>skills/herdr/SKILL.md</code>, Apache-2.0). It teaches a coding agent the <code>herdr</code> CLI: split panes, run commands, read output, and start or prompt sibling agents.</p>
+<ul>
+<li>Triggers only when the user explicitly mentions Herdr.</li>
+<li>Refuses to act outside a Herdr-managed pane (<code>HERDR_ENV=1</code>).</li>
+<li>Provenance, local changes and update procedure: <code>skills/control/references/upstream.md</code>.</li>
+<li>Drift check against the installed binary: <code>bash skills/control/scripts/upstream-drift.selfcheck.sh</code>.</li>
+</ul>
+</body>
+</html>

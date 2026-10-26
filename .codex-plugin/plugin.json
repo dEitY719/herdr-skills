@@ -1,0 +1,39 @@
+{
+  "name": "herdr",
+  "version": "0.1.0",
+  "description": "Skills for driving Herdr (terminal multiplexer for coding agents): control panes, tabs, workspaces and agents via the herdr CLI",
+  "author": {
+    "name": "dEitY719",
+    "url": "https://github.com/dEitY719"
+  },
+  "homepage": "https://github.com/dEitY719/herdr-skills",
+  "repository": "https://github.com/dEitY719/herdr-skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "plugin",
+    "marketplace",
+    "herdr"
+  ],
+  "skills": "./skills/",
+  "hooks": {},
+  "interface": {
+    "displayName": "Herdr",
+    "shortDescription": "Drive Herdr panes, tabs, workspaces and agents from a coding agent",
+    "longDescription": "Bundles one skill, control: the official Herdr agent skill vendored verbatim from herdrdev/herdr (Apache-2.0). It teaches the herdr CLI for splitting panes, running commands, reading output and starting or prompting sibling agents, and refuses to act outside a Herdr-managed pane (HERDR_ENV=1).",
+    "developerName": "dEitY719",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "defaultPrompt": [
+      "Use herdr to start a codex agent in a sibling pane and ask it to review this diff",
+      "Use herdr to run the tests in a new pane and read the result"
+    ],
+    "websiteURL": "https://github.com/dEitY719/herdr-skills",
+    "brandColor": "#2563EB",
+    "screenshots": []
+  }
+}

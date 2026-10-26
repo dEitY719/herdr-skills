@@ -1,0 +1,6 @@
+{
+  "name": "herdr",
+  "description": "Skills for driving Herdr (terminal multiplexer for coding agents): control panes, tabs, workspaces and agents via the herdr CLI",
+  "version": "0.1.0",
+  "contextFileName": "GEMINI.md"
+}

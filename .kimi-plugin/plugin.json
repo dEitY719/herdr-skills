@@ -1,0 +1,31 @@
+{
+  "name": "herdr",
+  "version": "0.1.0",
+  "description": "Skills for driving Herdr (terminal multiplexer for coding agents): control panes, tabs, workspaces and agents via the herdr CLI",
+  "author": {
+    "name": "dEitY719",
+    "url": "https://github.com/dEitY719"
+  },
+  "homepage": "https://github.com/dEitY719/herdr-skills",
+  "license": "MIT",
+  "keywords": [
+    "skills",
+    "plugin",
+    "marketplace",
+    "herdr"
+  ],
+  "skills": "./skills/",
+  "skillInstructions": "Kimi Code tool mapping for herdr skills:\n\n- When a skill says to ask the user, or asks for confirmation before a destructive step, call Kimi Code's `AskUserQuestion` tool.\n- When a skill refers to `TodoWrite`, use Kimi Code's `TodoList` tool.\n- When a skill asks to dispatch a subagent, use Kimi Code's `Agent` tool with `subagent_type: \"coder\"` for implementation and `subagent_type: \"explore\"` for read-only exploration; never `general-purpose`.\n- Use Kimi Code's `Read`, `Write`, `Edit`, `Bash`, `Grep`, `Glob` tools by their exposed names.\n- Honour each skill's safety contract: a read-only skill must never call `Write`, `Edit`, or a mutating `Bash` command.",
+  "interface": {
+    "displayName": "Herdr",
+    "shortDescription": "Drive Herdr panes, tabs, workspaces and agents from a coding agent",
+    "longDescription": "Bundles one skill, control: the official Herdr agent skill vendored verbatim from herdrdev/herdr (Apache-2.0). It teaches the herdr CLI for splitting panes, running commands, reading output and starting or prompting sibling agents, and refuses to act outside a Herdr-managed pane (HERDR_ENV=1).",
+    "developerName": "dEitY719",
+    "capabilities": [
+      "Interactive",
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/dEitY719/herdr-skills"
+  }
+}
