@@ -51,16 +51,18 @@ repo is MIT.
    Check 16 (description is 328 chars). The description text is unchanged.
 
 Nothing else differs. The `description` and all moved text are byte-identical
-to upstream.
+to upstream, apart from the two-line title prepended to each `references/*.md`
+and the pointer list in SKILL.md (both ignored/replaced by the drift check).
 
 ## Update procedure
 
 1. Upgrade herdr, then capture the bundled copy:
    `herdr --skill > /tmp/herdr-skill.md`
-2. Replace `skills/control/SKILL.md` with that file, then re-apply the local
-   changes listed above (`name: control`).
+2. Replace `skills/control/SKILL.md` with that file, then re-apply local
+   changes 1, 2, 4 and 5 above (frontmatter edits).
 3. Re-split per local change 3 (moved sections go to `references/*.md`, in
-   upstream order, each prefixed by a two-line title). Run the drift self-check. It must print `[OK] in sync with herdr <version>`:
+   upstream order, each prefixed by a two-line title). Run the drift
+   self-check. It must print `[OK] in sync with herdr <version>`:
    `bash skills/control/scripts/upstream-drift.selfcheck.sh`
 4. Update the table above (tag, commits, baseline version), and refresh
    `LICENSE.txt` if upstream changed it.

@@ -25,13 +25,13 @@ Spec: dEitY719/dotfiles#2291.
 `skills/control/SKILL.md` is a copy of upstream `herdrdev/herdr`
 `skills/herdr/SKILL.md` (Apache-2.0). Rules:
 
-- The body below the frontmatter stays byte-identical to upstream. Do not
-  reword, translate, shorten, or "improve" it.
-- The only sanctioned local change is frontmatter `name: herdr` -> `name: control`.
-  Any further change needs a reason recorded in
-  `skills/control/references/upstream.md` -> "Local changes".
-- Because it is vendored, the file exceeds the family's 100-line SKILL.md
-  budget and is not MIT. Both are deliberate; see "Licensing" and
+- The body text stays byte-identical to upstream. Do not reword, translate,
+  shorten, or "improve" it. Four sections live in `references/*.md` and a
+  pointer list stands in for them in SKILL.md; the drift check reassembles them.
+- Sanctioned local changes are listed in
+  `skills/control/references/upstream.md` -> "Local changes". Any further
+  change needs a reason recorded there.
+- Because it is vendored, the directory is not MIT; see "Licensing" and
   `.github/workflows/validate.yml`.
 - Provenance (URL, tag, commit SHAs, baseline herdr version) and the update
   procedure live in `skills/control/references/upstream.md`.
@@ -42,7 +42,7 @@ Spec: dEitY719/dotfiles#2291.
 bash skills/control/scripts/upstream-drift.selfcheck.sh
 ```
 
-Compares the vendored body with `herdr --skill` from the installed binary,
+Compares the reassembled vendored body (SKILL.md plus `references/*.md`) with `herdr --skill` from the installed binary,
 frontmatter stripped from both. `[OK]` exit 0 when in sync; unified diff and
 exit 1 on drift; `[SKIP]` exit 0 when herdr is not in PATH or lacks `--skill`.
 On drift, follow the update procedure in `upstream.md` and bump the version.
