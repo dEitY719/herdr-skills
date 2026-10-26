@@ -33,6 +33,9 @@ repo is MIT.
 
 1. Frontmatter `name: herdr` -> `name: control`, so Claude Code exposes the
    skill as `/herdr:control` instead of `/herdr:herdr`.
+2. Frontmatter `license: Apache-2.0` added. The shared CI license check
+   (`.github/workflows/validate.yml` `license-exceptions`) requires a
+   `license:` key in every SKILL.md; upstream's frontmatter has none.
 
 Nothing else differs. The `description` and the whole body are byte-identical
 to upstream.
