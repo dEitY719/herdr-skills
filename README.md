@@ -26,8 +26,8 @@ Claude Code:
 ## herdr:control 은 upstream vendor 본입니다
 
 `skills/control/SKILL.md` 는 herdr upstream 이 배포하는 공식 agent skill
-(`herdrdev/herdr` `skills/herdr/SKILL.md`, herdr 0.9.5 기준)을 원문 그대로 옮긴 것입니다.
-로컬 변경은 frontmatter `name: herdr` -> `name: control` 1건뿐입니다.
+(`herdrdev/herdr` `skills/herdr/SKILL.md`, herdr 0.9.5 기준)을 옮긴 것입니다. 본문 4개 섹션은 `references/*.md` 로 분리했고(원문 그대로),
+그 외 로컬 변경은 frontmatter(`name`, `license`, `metadata`)뿐입니다.
 출처·커밋·갱신 절차는 [`skills/control/references/upstream.md`](skills/control/references/upstream.md).
 
 설치된 herdr 바이너리와 본문이 어긋났는지 확인:

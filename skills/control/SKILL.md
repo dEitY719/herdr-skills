@@ -58,6 +58,7 @@ Read the reference file that matches the job:
 - `references/ids-and-caller-context.md` — public ID formats, `HERDR_PANE_ID`, and addressing the caller's own pane.
 - `references/agent-coordination.md` — starting an agent in a sibling pane, sending prompts, waiting, and reading results.
 - `references/pane-commands.md` — running ordinary commands (tests, servers, shells) in another pane.
+
 Provenance and local changes: `references/upstream.md`.
 
 ## Safety and coordination rules
