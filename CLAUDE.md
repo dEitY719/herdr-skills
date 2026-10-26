@@ -43,8 +43,8 @@ bash skills/control/scripts/upstream-drift.selfcheck.sh
 ```
 
 Compares the reassembled vendored body (SKILL.md plus `references/*.md`) with
-`herdr --skill` from the installed binary, frontmatter stripped from both. `[OK]` exit 0 when in sync; unified diff and
-exit 1 on drift; `[SKIP]` exit 0 when herdr is not in PATH or lacks `--skill`.
+`herdr --skill` from the installed binary, frontmatter stripped from both.
+`[OK]` exit 0 when in sync; unified diff and exit 1 on drift; `[SKIP]` exit 0 when herdr is not in PATH or lacks `--skill`.
 On drift, follow the update procedure in `upstream.md` and bump the version.
 Never disable the check.
 

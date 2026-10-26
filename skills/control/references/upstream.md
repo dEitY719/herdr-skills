@@ -37,7 +37,7 @@ repo is MIT.
    (`.github/workflows/validate.yml` `license-exceptions`) requires a
    `license:` key in every SKILL.md; upstream's frontmatter has none.
 
-3. Progressive-disclosure split (owner decision, authoring:skill-refactor):
+3. Progressive-disclosure split (owner decision, dEitY719/herdr-skills#1):
    the sections "Understand layout, panes, and agents", "Use IDs and caller
    context", "Start and coordinate an agent" and "Run an ordinary command in
    another pane" moved verbatim to `references/*.md`, replaced in SKILL.md by a
@@ -49,9 +49,10 @@ repo is MIT.
 5. Frontmatter comment `# Check 16: ...` added above `description:`, to satisfy
    Check 16 (description is 328 chars). The description text is unchanged.
 
-Nothing else differs. The `description` and all moved text are byte-identical
-to upstream, apart from the two-line title prepended to each `references/*.md`
-and the pointer list in SKILL.md (both ignored/replaced by the drift check).
+Nothing else differs in content. The `description` and the moved section text
+are identical to upstream. The only added lines are the two-line title at the
+top of each `references/*.md` and the pointer list in SKILL.md; the drift check
+drops both when it reassembles the body.
 
 ## Update procedure
 
