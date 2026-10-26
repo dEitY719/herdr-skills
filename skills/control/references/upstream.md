@@ -42,8 +42,7 @@ repo is MIT.
    context", "Start and coordinate an agent" and "Run an ordinary command in
    another pane" moved verbatim to `references/*.md`, replaced in SKILL.md by a
    pointer list. Text is unchanged, but SKILL.md no longer matches upstream, so
-   `scripts/upstream-drift.selfcheck.sh` reports drift until it is taught to
-   compare the reassembled body.
+   `scripts/upstream-drift.selfcheck.sh` compares the reassembled body.
 
 4. Frontmatter `metadata.model_recommendation` added (tier sonnet), to satisfy
    authoring:skill-check Check 13.
